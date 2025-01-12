@@ -1,0 +1,45 @@
+---
+import home1 from '@/assets/home1.webp';
+import {Image} from 'astro:assets';
+---
+<section class="relative bg-gradient-to-br from-blue-800 via-blue-600 to-blue-400 text-white overflow-hidden">
+    <div class="container mx-auto flex flex-col lg:flex-row items-center px-6 py-12 lg:py-24 mt-10">
+        <!-- Texto -->
+        <div class="w-full lg:w-1/2 text-center lg:text-left z-10">
+            <h1 class="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+                Innovación Tecnológica<br />Para Transformar Tu Futuro
+            </h1>
+            <p class="text-lg lg:text-xl mb-8 leading-relaxed text-gray-200">
+                Como ingeniero de sistemas, combino creatividad y tecnología para desarrollar soluciones personalizadas y eficientes. Vamos juntos al siguiente nivel.
+            </p>
+            <a href="#contact" class="px-6 py-3 bg-blue-600 rounded-lg text-white hover:bg-blue-800 transition">
+                Contáctame
+            </a>
+        </div>
+
+        <!-- Imagen y elementos decorativos -->
+        <div class="w-full lg:w-1/2 relative flex justify-center lg:justify-end z-10">
+            <div class="relative w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-lg">
+                <Image src={home1} alt="Tecnología" class="w-full h-full object-cover" />
+            </div>
+            <div class="absolute -top-10 -left-10 w-40 h-40 bg-blue-500 rounded-full blur-3xl opacity-30"></div>
+            <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-blue-300 rounded-full blur-3xl opacity-30"></div>
+        </div>
+    </div>
+
+    <!-- Elementos decorativos de fondo -->
+    <div class="absolute inset-0">
+        <svg
+                class="absolute top-0 left-0 w-full h-full opacity-20"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1440 320"
+                preserveAspectRatio="none"
+        >
+            <path
+                    fill="#FFFFFF"
+                    fill-opacity="0.1"
+                    d="M0,288C144,256,288,160,432,128C576,96,720,128,864,144C1008,160,1152,160,1296,144C1440,128,1584,96,1728,80L1728,320L0,320Z"
+            />
+        </svg>
+    </div>
+</section>

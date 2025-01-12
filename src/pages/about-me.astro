@@ -1,0 +1,166 @@
+---
+import Layout from "../layouts/Layout.astro";
+import {Image} from "astro:assets";
+import yo from "@/assets/yo.png";
+import SocialShared from "../components/ui/SocialShared.astro";
+import {ExperienceSection} from "@/components/sections/ExperienceSection";
+---
+<Layout title="Sobre Mi">
+    <section class="bg-gradient-to-br from-blue-800 via-blue-600 to-blue-400 text-white relative pt-40">
+        <div class="container mx-auto px-52 flex flex-col lg:flex-row items-center gap-12">
+            <!-- Columna de Información -->
+            <div class="w-full lg:w-1/2">
+                <h1 class="text-5xl font-bold text-white mb-4">Luis Mayta</h1>
+                <p class="text-xl  font-medium mb-6">Técnico en Computación e Informática</p>
+                <div class="space-y-4 mb-8">
+                    <p class="text-blue-300"><strong>Dirección:</strong> Lima, Perú</p>
+                    <p class="text-blue-300"><strong>E-mail:</strong> luis.mayta@gmail.com</p>
+                    <p class="text-blue-300"><strong>Teléfono:</strong> 51 992949424</p>
+                </div>
+                <SocialShared />
+                <button class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 mt-4">Ver Mi Portafolio</button>
+            </div>
+
+            <!-- Columna de Foto -->
+            <div class="">
+                <Image
+                    src={yo}
+                    alt="Luis Mayta"
+                    class=" z-10 w-80 object-cover object-top"
+                />
+            </div>
+        </div>
+    </section>
+    <section class="bg-gray-50 py-16">
+        <div class="container mx-auto px-6">
+            <!-- Título -->
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Mis Habilidades</h2>
+
+            <!-- Grid de Columnas -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+                <!-- Columna: Programación -->
+                <div class="bg-white shadow-md rounded-lg p-6">
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-4">Programación</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>PHP</li>
+                        <li>Python</li>
+                        <li>Flutter</li>
+                        <li>React</li>
+                        <li>Laravel</li>
+                        <li>Drupal</li>
+                        <li>Joomla</li>
+                    </ul>
+                </div>
+
+                <!-- Columna: Gestión de Proyectos -->
+                <div class="bg-white shadow-md rounded-lg p-6">
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-4">Gestión de Proyectos</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Jira</li>
+                        <li>ClickUp</li>
+                        <li>Trello</li>
+                        <li>Asana</li>
+                    </ul>
+                </div>
+
+                <!-- Columna: DevOps -->
+                <div class="bg-white shadow-md rounded-lg p-6">
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-4">DevOps</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>AWS</li>
+                        <li>Linux</li>
+                        <li>Docker</li>
+                        <li>Kubernetes</li>
+                        <li>Windows Server</li>
+                    </ul>
+                </div>
+
+                <!-- Columna: Big Data y Diseño -->
+                <div class="bg-white shadow-md rounded-lg p-6">
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-4">Big Data</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Power BI</li>
+                        <li>Tableau</li>
+                        <li>Data Base</li>
+                        <li>R</li>
+                    </ul>
+                </div>
+                <!-- Columna: Diseño y Base de Datos -->
+                <div class="bg-white shadow-md rounded-lg p-6">
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-4">Diseño</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Canva</li>
+                        <li>GIMP</li>
+                    </ul>
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-4">Base de Datos</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Mysql</li>
+                        <li>Postgres</li>
+                        <li>FireStore (firebase)</li>
+                        <li>Mongo DB</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <ExperienceSection client:load />
+    <section class="bg-blue-100 py-16">
+        <div class="container mx-auto px-6">
+            <!-- Título -->
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Mi Educación</h2>
+
+            <!-- Grid de Sub-Secciones -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Educación Formal -->
+                <div>
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-6">Educación Formal</h3>
+                    <div class="space-y-6">
+                        <!-- UTP -->
+                        <div class="bg-white shadow-md rounded-lg p-6">
+                            <h4 class="text-xl font-bold text-gray-800">Universidad Tecnológica del Perú (UTP)</h4>
+                            <p class="text-gray-600">Ingeniería de Software (2022 - Actualidad)</p>
+                        </div>
+                        <!-- IDAT -->
+                        <div class="bg-white shadow-md rounded-lg p-6">
+                            <h4 class="text-xl font-bold text-gray-800">IDAT</h4>
+                            <p class="text-gray-600">Técnico en Computación e Informática (2008 - 2010)</p>
+                        </div>
+                        <!-- INTERWARE -->
+                        <div class="bg-white shadow-md rounded-lg p-6">
+                            <h4 class="text-xl font-bold text-gray-800">INTERWARE EIRL</h4>
+                            <p class="text-gray-600">Linux Básico y Administración (2014 - 2014)</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Cursos y Capacitaciones -->
+                <div>
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-6">Cursos y Capacitaciones</h3>
+                    <div class="space-y-4">
+                        <!-- Curso 1 -->
+                        <div class="bg-white shadow-md rounded-lg p-6">
+                            <h4 class="text-lg font-bold text-gray-800">Curso de Programación</h4>
+                            <p class="text-gray-600">2025</p>
+                            <p class="text-gray-600">Astro - NextJs - NestJs</p>
+                        </div>
+                        <!-- Curso 2 -->
+                        <div class="bg-white shadow-md rounded-lg p-6">
+                            <h4 class="text-lg font-bold text-gray-800">Curso de Programación</h4>
+                            <p class="text-gray-600">2024</p>
+                            <p class="text-gray-600">Flutter - React - NestJs</p>
+                        </div>
+                        <!-- Curso 3 -->
+                        <div class="bg-white shadow-md rounded-lg p-6">
+                            <h4 class="text-lg font-bold text-gray-800">Curso de Programación</h4>
+                            <p class="text-gray-600">2023</p>
+                            <p class="text-gray-600">Flutter avanzado - PWA - Python - AWS - Laravel 9 - Scrum - Docker</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</Layout>

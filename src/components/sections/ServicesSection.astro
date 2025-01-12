@@ -1,0 +1,52 @@
+---
+import { getCollection } from "astro:content"
+import ServiceItem from "./ServiceItem.astro";
+
+const services =await getCollection("servicesContent");
+
+---
+<section class="bg-white py-16">
+    <div class="container mx-auto px-6 text-center">
+        <!-- Título -->
+        <h2 class="text-xl text-purple-600 font-semibold">
+            Soluciones Tecnológicas Adaptadas A Tus Necesidades
+        </h2>
+        <h1 class="text-4xl lg:text-5xl font-bold text-gray-800 mt-4 leading-snug">
+            Descubre Cómo Puedo Ayudarte A Transformar <br />
+            Tus Ideas En Proyectos Exitosos
+        </h1>
+        <!-- Botón -->
+        <div class="mt-6">
+            <a
+                    href="#services"
+                    class="inline-flex items-center px-6 py-3 bg-purple-600 text-white font-medium text-lg rounded-lg shadow-lg hover:bg-purple-700 transition"
+            >
+                Más Servicios
+                <svg
+                        class="ml-2 w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <!-- Tarjetas de Servicios -->
+    <div class="container mx-auto px-6 mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {
+            services.map((service) => (
+                <ServiceItem
+                        title={service.data.title}
+                        description={service.data.description}
+                        icon={service.data.icon}
+                        id = {service.id}
+                />
+            ))
+        }
+    </div>
+</section>
