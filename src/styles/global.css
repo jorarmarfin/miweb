@@ -5,3 +5,53 @@
 .primary{
     @apply text-blue-600;
 }
+
+.title {
+    @apply text-4xl font-bold text-blue-600 mb-4;
+}
+
+h2 {
+    @apply text-3xl font-semibold text-blue-500 mb-3 mt-4;
+}
+
+h3 {
+    @apply text-2xl font-semibold text-gray-800 mb-2;
+}
+
+p {
+    @apply text-gray-700 leading-relaxed mb-4;
+}
+
+ul {
+    @apply list-disc list-inside space-y-2;
+}
+
+ol {
+    @apply list-decimal list-inside space-y-2;
+}
+
+blockquote {
+    @apply border-l-4 border-blue-600 italic pl-4 text-gray-600;
+}
+
+
+
+code {
+    @apply bg-gray-100 text-pink-600 px-2 py-1 rounded font-mono;
+}
+
+pre {
+    @apply bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto;
+}
+
+table {
+    @apply table-auto border-collapse border border-gray-300 w-full text-sm;
+}
+
+table th {
+    @apply bg-gray-100 border border-gray-300 px-4 py-2 text-left font-semibold;
+}
+
+table td {
+    @apply border border-gray-300 px-4 py-2;
+}

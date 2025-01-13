@@ -8,6 +8,8 @@ const servicesContent = defineCollection({
         description: z.string(),
         icon: z.string(),
         imagen: z.string(),
+        order: z.number(),
+        features: z.array(z.string()),
     }),
 });
 

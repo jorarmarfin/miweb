@@ -2,6 +2,8 @@
 import Layout from "../../layouts/Layout.astro";
 import {getCollection} from "astro:content";
 import {render,getEntry} from "astro:content";
+import {Image} from "astro:assets";
+
 export const getStaticPaths = ( async () => {
     const services = await getCollection('servicesContent');
     return services.map((service) => ({
@@ -9,23 +11,21 @@ export const getStaticPaths = ( async () => {
         props: service,
     }));
 }) satisfies GetStaticPaths;
-
 const { slug } = Astro.params;
 const service = Astro.props;
 const entry = await getEntry('servicesContent', slug);
 const {Content} = await render(entry);
 ---
 <Layout title={service.data.title}>
-
-     Página Estática para el servicio "DevOps"
-    <section class="min-h-screen bg-gray-100 pt-20">
+    <section class="min-h-screen bg-gray-100 pt-14">
         <!-- Encabezado -->
-        <header class="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16">
+        <header class="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
             <div class="container mx-auto px-6 text-center">
-                <h1 class="text-4xl font-bold">{service.data.title}</h1>
-                <p class="mt-4 text-lg">
+                <span class="text-4xl font-bold">{service.data.title}</span>
+                <br>
+                <span class="mt-4 text-lg">
                     {service.data.description}
-                </p>
+                </span>
             </div>
         </header>
 
@@ -34,34 +34,31 @@ const {Content} = await render(entry);
             <div class="flex flex-col lg:flex-row items-center gap-8">
                 <!-- Imagen -->
                 <div class="w-full lg:w-1/2">
-                    <img src={service.data.imagen} alt="DevOps" class="rounded-lg shadow-lg" />
+                    <Image transition:name={`${service.id}-image-service`}
+                           src={service.data.imagen}
+                           alt={service.data.title}
+                           width={600} height={400}
+                           class="rounded-lg shadow-lg" />
                 </div>
 
                 <!-- Beneficios -->
                 <div class="w-full lg:w-1/2">
                     <h2 class="text-2xl font-bold mb-4">Características Clave</h2>
                     <ul class="space-y-4">
-                        <li class="flex items-start">
-                            <span class="w-6 h-6 flex items-center justify-center bg-blue-600 text-white rounded-full mr-4">✔</span>
-                            <p>Integración continua (CI/CD)</p>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="w-6 h-6 flex items-center justify-center bg-blue-600 text-white rounded-full mr-4">✔</span>
-                            <p>Automatización de despliegues</p>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="w-6 h-6 flex items-center justify-center bg-blue-600 text-white rounded-full mr-4">✔</span>
-                            <p>Monitoreo en tiempo real</p>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="w-6 h-6 flex items-center justify-center bg-blue-600 text-white rounded-full mr-4">✔</span>
-                            <p>Infraestructura como código (IaC)</p>
-                        </li>
+                        {
+                            service.data.features.map((feature:any) => (
+                                <li class="flex items start">
+                                    <span class="w-6 h-6 flex items-center justify-center bg-blue-600 text-white rounded-full mr-4">+</span>
+                                    <p>{feature}</p>
+                                </li>
+                            ))
+                        }
+
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="container mx-auto">
+        <div class="container mx-auto pb-10">
             <Content />
         </div>
         <!-- Llamado a la Acción -->
@@ -69,7 +66,7 @@ const {Content} = await render(entry);
             <div class="container mx-auto text-center">
                 <h2 class="text-2xl font-bold mb-4">¿Quieres saber más?</h2>
                 <p class="mb-6 text-gray-700">
-                    Ponte en contacto con nosotros para conocer cómo DevOps puede transformar tu negocio.
+                    Contactame y vemos que solución te puedo ofrecer.
                 </p>
                 <a href="/contact" class="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg shadow-lg hover:bg-blue-700">
                     Contáctanos

@@ -3,7 +3,7 @@ import { getCollection } from "astro:content"
 import ServiceItem from "./ServiceItem.astro";
 
 const services =await getCollection("servicesContent");
-
+services.sort((a, b) => a.data.order - b.data.order);
 ---
 <section class="bg-white py-16">
     <div class="container mx-auto px-6 text-center">
