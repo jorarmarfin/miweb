@@ -14,16 +14,19 @@ export const NavBar = () => {
 
                 {/* Menu para escritorio */}
                 <div className="hidden lg:flex space-x-8">
+                    <a href="/" className="text-gray-700 hover:text-blue-600 transition">Inicio</a>
                     <a href="/about-me" className="text-gray-700 hover:text-blue-600 transition">Sobre mí</a>
                     <a href="/services" className="text-gray-700 hover:text-blue-600 transition">Servicios</a>
-                    <a href="#contact" className="text-gray-700 hover:text-blue-600 transition">Contacto</a>
+                    <a href="/projects" className="text-gray-700 hover:text-blue-600 transition">Proyectos</a>
+                    <a href="/products" className="text-gray-700 hover:text-blue-600 transition">Productos</a>
+                    <a href="/contact" className="text-gray-700 hover:text-blue-600 transition">Contacto</a>
                 </div>
 
                 {/* Botón */}
                 <div className="hidden lg:block">
-                    <button className="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition">
+                    <a href='/cv_2024.pdf' className="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition" download>
                         CV
-                    </button>
+                    </a>
                 </div>
 
                 {/* Botón de menú móvil */}
