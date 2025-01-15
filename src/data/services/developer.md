@@ -38,10 +38,10 @@ Me especializo en crear soluciones de software adaptadas a las necesidades únic
     - Entrego la solución lista para usar, con soporte técnico si lo necesitas.
 
 ## Ejemplos de Proyectos Anteriores
-- **E-commerce Personalizado**:
-    - Desarrollé una tienda en línea para un cliente, con integración de pasarelas de pago, diseño atractivo y funcionalidad responsiva.
-- **Sistema de Gestión Empresarial**:
-    - Creé un sistema interno para automatizar procesos y mejorar la eficiencia operativa.
+- **Sistema de Peticiones**:
+    - Desarrollé un sistema en Laravel de peticiones para la institución padres peruanos.
+- **Sistema de almacén**:
+    - Creé un sistema en React + algolia + firestore para una oficina de la UNI.
 
 ## ¿Por Qué Elegirme?
 Como desarrollador, combino habilidades técnicas con un enfoque centrado en el cliente. Mi objetivo es ofrecerte soluciones que no solo funcionen, sino que también impulsen el éxito de tu proyecto.

@@ -43,12 +43,10 @@ Cuento con amplia experiencia en el análisis y visualización de datos para con
     - Proporciono dashboards interactivos y, si es necesario, capacito a tu equipo para usarlos.
 
 ## Ejemplos de Proyectos Anteriores
-- **Dashboard Financiero en Power BI**:
-    - Implementé un dashboard para monitorear ingresos, egresos y KPIs, reduciendo el tiempo de generación de reportes en un 70%.
-- **Análisis de Clientes con Tableau**:
-    - Ayudé a un cliente a identificar patrones de comportamiento, mejorando su retención en un 20%.
-- **Pipeline Automatizado con Python y Metabase**:
-    - Diseñé un pipeline que extrae datos desde múltiples fuentes, los procesa y los presenta automáticamente en un dashboard de Metabase.
+- **Observatorio de CENAN - INS**:
+    - Implementé los dashboard de anemia y desnutrición en Power BI para el Observatorio de CENAN - INS.
+- **Observatorio de Ayacucho**:
+    - Implemente los dashboard de población, salud, economía, educación y otros en Power BI para el Observatorio de Ayacucho. 
 
 ## ¿Por Qué Elegirme?
 Con experiencia en herramientas líderes y un enfoque centrado en los datos, puedo ayudarte a desbloquear el verdadero potencial de tu información. Mis soluciones están diseñadas para ser prácticas, escalables y fáciles de usar.
